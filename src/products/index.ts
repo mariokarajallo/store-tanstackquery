@@ -9,6 +9,7 @@ export * as productsActions from "./services/actions";
 
 // Hooks
 export { useProducts } from "./hooks/useProducts";
+export { useProduct } from "./hooks/useProduct";
 
 // Components
 
@@ -21,3 +22,4 @@ export { CompleteListPage } from "./pages/CompleteListPage";
 export { MensPage } from "./pages/MensPage";
 export { NewProduct } from "./pages/NewProduct";
 export { WomensPage } from "./pages/WomensPage";
+export { ProductByID } from "./pages/ProductByID";

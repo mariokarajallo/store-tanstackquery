@@ -2,24 +2,24 @@ import { useQuery } from "@tanstack/react-query";
 import { productsActions } from "..";
 
 interface Options {
-  filterKey?: string;
+  id: number;
 }
 
-export const useProducts = ({ filterKey }: Options) => {
+export const useProduct = ({ id}: Options) => {
   const {
-    data: products = [],
+    data: product,
     isLoading,
     isError,
     error,
     isFetching,
   } = useQuery({
-    queryKey: ["products", { filterKey }],
-    queryFn: () => productsActions.getProducts({ filterKey }),
+    queryKey: ["product", { id }],
+    queryFn: () => productsActions.getProductById(id),
     staleTime: 1000 * 60 * 60,
   });
 
   return {
-    products,
+    product,
     isLoading,
     isError,
     error,
