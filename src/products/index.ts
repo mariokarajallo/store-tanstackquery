@@ -10,6 +10,7 @@ export * as productsActions from "./services/actions";
 // Hooks
 export { useProducts } from "./hooks/useProducts";
 export { useProduct } from "./hooks/useProduct";
+export { usePrefetchProduct } from "./hooks/usePrefetchProduct";
 
 // Components
 
